@@ -1,0 +1,13 @@
+<h1>Tour of Heroes ({{mode}})</h1>
+<h3>Heroes:</h3>
+<ul>
+  <li *ngFor="let tweet of tweets">
+    <choc-tweet [tweet]="tweet"></choc-tweet>
+  </li>
+</ul>
+New tweet:
+<input #newTweetText />
+<button (click)="addTweet(newTweetText.value); newTweetText.value=''">
+  Add Tweet
+</button>
+<div class="error" *ngIf="errorMessage">{{errorMessage}}</div>
