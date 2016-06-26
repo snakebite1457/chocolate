@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { Tweet }          from '../shared/tweets';
+import { Tweet }          from '../shared';
 import { Http, Response } from '@angular/http';
 import { Observable }     from 'rxjs/Observable';
 
@@ -13,7 +13,7 @@ export class TweetService {
   constructor (private http: Http) { 
   }
 
-  getTweets (): Observable<Tweet[]> {
+  getTweets(): Observable<Tweet[]> {
     return this.http.get(this.tweetsUrl)
                     .map(this.extractData)
                     .catch(this.handleError);

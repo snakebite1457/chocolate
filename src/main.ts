@@ -10,6 +10,4 @@ import { AppComponent }   from './app/app.component';
 /*
 bootstrap(AppComponent, [ HTTP_PROVIDERS ]);
  */
-bootstrap(AppComponent, [
-    HTTP_PROVIDERS
-]);
+bootstrap(AppComponent, [HTTP_PROVIDERS]);

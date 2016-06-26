@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Tweet } from '../shared/tweets';
+import { Component, OnInit, Input } from '@angular/core';
+import { Tweet } from '../shared';
 
 @Component({
   moduleId: module.id,
@@ -7,9 +7,12 @@ import { Tweet } from '../shared/tweets';
   templateUrl: 'tweet.component.html',
   styleUrls: ['tweet.component.css']
 })
+
 export class TweetComponent implements OnInit {
 
-  constructor(public tweet: Tweet) {}
+  @Input('tweet') tweet: Tweet;
+
+  constructor() {}
 
   ngOnInit() {
 

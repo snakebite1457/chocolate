@@ -1,7 +1,7 @@
 import { Component, OnInit }  from '@angular/core';
-import { Tweet }              from '../shared/tweets';
+import { Tweet }              from '../shared';
 import { TweetComponent }     from '../tweet';
-import { TweetService }       from '../tweet/tweet.service';
+import { TweetService }       from '../tweet';
 
 
 @Component({
@@ -10,7 +10,7 @@ import { TweetService }       from '../tweet/tweet.service';
   templateUrl: 'tweet-list.component.html',
   styleUrls: ['tweet-list.component.css'],
   directives: [TweetComponent],
-  providers: [ TweetService ]
+  providers: [TweetService]
 })
 export class TweetListComponent implements OnInit {
 
@@ -30,7 +30,7 @@ export class TweetListComponent implements OnInit {
                     .subscribe(
                       tweets => this.tweets = tweets,
                       error =>  this.errorMessage = <any>error);
+
+    //this.tweets = [new Tweet("dad", "ads")];
   }
-
-
 }
