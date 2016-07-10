@@ -35,6 +35,7 @@ const barrels: string[] = [
   'app/shared',
   'app/tweet',
   'app/tweet-list',
+  'app/account',
   /** @cli-barrel */
 ];
 
